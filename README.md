@@ -13,18 +13,18 @@ You are able to choose witch plugins you are using to get a better performance.
 
 ## Setup
 * How to setup the plugin on your website:
+
 ```javascript
 <script type="text/javascript" src="social.sdks.js"></script>
 <script type="text/javascript">
-	socialInit({
-		fbAppId: "346759598747625", // Your Facebook App ID
-		facebook: true, // true to use, false if you not intend to use it
-		google: true,
-		twitter: true,
-		linkedin: true
-	});
+socialInit({
+  fbAppId: "346759598747625", // Your Facebook App ID
+  facebook: true, // true to use, false if you not intend to use it
+  google: true,
+  twitter: true,
+  linkedin: true
+});
 </script>
-
 ```
 
 
