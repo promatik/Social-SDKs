@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Dinamic URL Examples</title>
+		<meta property="og:title" content="Social SDKs Plugin, @promatik"/>
+		<meta property="og:type" content="website"/>
+		<meta property="og:image" content="http://promatik.no.sapo.pt/images/promatik.jpg"/>
+		<meta property="og:description" content="With Social SDks plugin, you can easily update, after an ajax request, buttons of social plugins like Facebook, Google Plus, Linked In and Twitter."/>
+		<meta property="og:url" content="http://promatik.no.sapo.pt/github/social-sdks/"/>
+		<meta property="fb:admins" content="100000258524385"/>
+		<meta property="fb:app_id" content="150154111693861"/>
+		
+		<link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+		<script type="text/javascript" src="social.sdks.min.js"></script>
+		
+		<link rel="stylesheet" type="text/css" href="style.css"/>
+		<script type="text/javascript" src="script.js"></script>
+		
+		<script type="text/javascript">
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-26516943-3']);
+		  _gaq.push(['_trackPageview']);
+		  (function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+		</script>
+	</head>
+	
+	<body>
+	<div id="fb-root"></div>
+	<div id="head-fix">
+		<div id="head">
+			<div id="btn-demo" class="menu-item">Demo</div>
+			<div id="btn-download" class="menu-item">Download</div>
+			<div id="btn-support" class="menu-item">Support</div>
+			<div id="btn-author" class="menu-item">Toni Almeida, @promatik</div>
+		</div>
+	</div>
+	
+	<div id="demo" class="content">
+		<h1>Social SDKs <span class="function">Demo</span></h1>
+		
+		<div class="separator">&nbsp;</div>
+		<h5 style="line-height: 22px;">
+			With this plugin, you can easily update, after an ajax request, buttons of social plugins like "Facebook Like", "g+", "Linked in Share", "Tweet"...<br />
+			You don't need any additional Javascript code from Facebook or Google, its all packed in with this plugin.
+		</h5>
+		
+		<div class="separator">&nbsp;</div>
+		<p class="description">This is the HTML code to create a bunch of social sharing buttons (FB Like, LinkedIn Share, Twitt and Google +)</p>
+		<div class="code">
+			<code class="code">
+				<p>&lt;div class=<span class="string">"fb-like"</span> data-href=<span class="string">"http://promatik.no.sapo.pt"</span> data-send=<span class="string">"false"</span> data-layout=<span class="string">"button_count"</span> data-width=<span class="string">"450"</span> data-show-faces=<span class="string">"true"</span>&gt;&lt;/div&gt;</p>
+				<p>&lt;script type=<span class="string">"IN/Share"</span> data-url=<span class="string">"http://promatik.no.sapo.pt"</span> data-counter=<span class="string">"right"</span>&gt;&lt;/script&gt;</p>
+				<p>&lt;a style=<span class="string">"width:100%; height:100%"</span> href=<span class="string">"https://twitter.com/share"</span> class=<span class="string">"twitter-share-button"</span> data-url=<span class="string">"http://promatik.no.sapo.pt"</span> data-lang=<span class="string">"en"</span>&gt;&lt;/a&gt;</p>
+				<p>&lt;div class=<span class="string">"g-plusone"</span> data-size=<span class="string">"medium"</span> data-annotation=<span class="string">"none"</span> href=<span class="string">"http://promatik.no.sapo.pt"</span>&gt;&lt;/div&gt;</p>
+			</code>
+		</div>
+		<p class="description">The result:</p>
+		<div>
+			<div class="soc"><div class="fb-like" data-href="http://promatik.no.sapo.pt" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true" data-font="arial"></div></div>
+			<div class="soc"><script type="IN/Share" data-url="http://promatik.no.sapo.pt" data-counter="right"></script></div>
+			<div class="soc"><a style="width:100%; height:100%" href="https://twitter.com/share" class="twitter-share-button" data-url="http://promatik.no.sapo.pt" data-lang="en"></a></div>
+			<div class="soc"><div class="g-plusone" data-size="medium" data-annotation="none" href="http://promatik.no.sapo.pt"></div></div>
+		</div>
+		<div class="description" style="line-height: 22px;">
+			It worked like a charm! Because it was already in the DOM when the page loaded.<br />
+			However, if you load this code after the window load, for example, by ajax, it wouldn't be so easy ...<br />
+			You'd need to run <span class="function">renderSocialPlugins()</span><br />
+			Take a look ...<br />
+		</div>
+		
+		<div class="separator">&nbsp;</div>
+		<h2>renderSocialPlugins()</h2>
+		
+		<p class="description">Here is the code you need to call after adding code to the DOM</p>
+		<div class="code">
+			<p>renderSocialPlugins();</p>
+		</div>
+		<button id="action-ajax" class="btn">Click to add buttons via JavaScript</button>
+		<button id="action-rend" class="btn">Click to run renderSocialPlugins()</button>
+		
+		<p class="description">
+			<i>After clicking "add buttons via Javascript" nothing is going to happen, until you click to "renderSocialPlugins()"</i><br />
+			Result:
+		</p>
+		<div id="ajax-results">
+			
+		</div>
+		
+		<div class="separator">&nbsp;</div>
+		<h2>socialInit()</h2>
+		
+		<p class="description">So to conclude, here is the plugin initialization:</p>
+		<div class="code">
+			<p>
+			socialInit({<br />
+				<span class="margin">fbAppId: <span class="string">"346759598747625"</span>, </span><span class="comment">// Your Facebook App ID</span><br />
+				<span class="margin">facebook: <span class="string">true</span>, </span><span class="comment">// true to use facebook, false if you not intend to use it</span><br />
+				<span class="margin">google: <span class="string">true</span>,</span><br />
+				<span class="margin">twitter: <span class="string">true</span>,</span><br />
+				<span class="margin">linkedin: <span class="string">true</span></span><br />
+			});<br />
+		</p>
+		</div>
+		
+		<p class="description" style="line-height: 22px;">
+			You are able to choose witch plugins you are using to get a better performance.<br />
+			<i>Note: If you are using Facebook like, you need an App ID, you can get one at: <a href="https://developers.facebook.com/docs/reference/plugins/like/" target="_blank">https://developers.facebook.com/docs/reference/plugins/like/</a></i>
+		</p>
+	</div>
+	
+	<div id="download" class="content">
+		<h1>Social SDKs <span class="function">Download</span></h1>
+		
+		<p>It's highly recommended to download the plugin from GitHub, because it's always updated there!</p>
+		
+		<p>Here is the link to GitHub: <a href="https://github.com/promatik/Social-SDKs">https://github.com/promatik/Social-SDKs</a></p>
+	</div>
+	
+	<div id="support" class="content">
+		<h1>Social SDKs <span class="function">Support</span></h1>
+		
+		<p>Support requests and general discussions about the Social SDKs plugin can be posted in the <a target="_blank" href="https://groups.google.com/forum/#!forum/social-sdks">official forum</a>.</p>
+		<p>If your question is not directly related to the Social SDKs plugin, you might have a better chance to get a reply by posting to Stack Overflow. Bugs and Feature requests can be reported using the issues tracker at GitHub.</p>
+		
+	</div>
+	
+	</body>
+</html>
+
