@@ -6,7 +6,7 @@ You don't need any additional Javascript code from Facebook or Google, its all p
 You are able to choose witch plugins you are using to get a better performance.
 
 ## Demo
-[Demo Social SDks](http://promatik.no.sapo.pt/github/social-sdks/)
+[Demo Social SDks](http://promatik.pt/github/social-sdks/)
 
 ## Download
 * [Master branch](https://github.com/promatik/Social-SDKs/archive/master.zip)

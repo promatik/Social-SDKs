@@ -17,7 +17,7 @@ $(document).ready(function() {
 	});
 	
 	$("#btn-author").click(function(){
-		window.open("http://promatik.no.sapo.pt");
+		window.open("http://promatik.pt");
 	});
 	
 	/* DEMO */ 
@@ -35,10 +35,10 @@ $(document).ready(function() {
 		$("button").first().attr("disabled", true);
 		
 		$("#ajax-results").html("").append(
-			'<div class="soc"><div class="fb-like" data-href="http://promatik.no.sapo.pt" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true" data-font="arial"></div></div>' +
-			'<div class="soc"><script type="IN/Share" data-url="http://promatik.no.sapo.pt" data-counter="right"></script></div>' +
-			'<div class="soc"><a style="width:100%; height:100%" href="https://twitter.com/share" class="twitter-share-button" data-url="http://promatik.no.sapo.pt" data-lang="en"></a></div>' +
-			'<div class="soc"><div class="g-plusone" data-size="medium" data-annotation="none" href="http://promatik.no.sapo.pt"></div></div>'
+			'<div class="soc"><div class="fb-like" data-href="http://promatik.pt" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true" data-font="arial"></div></div>' +
+			'<div class="soc"><script type="IN/Share" data-url="http://promatik.pt" data-counter="right"></script></div>' +
+			'<div class="soc"><a style="width:100%; height:100%" href="https://twitter.com/share" class="twitter-share-button" data-url="http://promatik.pt" data-lang="en"></a></div>' +
+			'<div class="soc"><div class="g-plusone" data-size="medium" data-annotation="none" href="http://promatik.pt"></div></div>'
 		);
 	});
 
